@@ -1,9 +1,11 @@
 <script>
-import StockSearch from './components/StockSearch.vue'
+import StockSearch from './components/Stocksearch.vue'
+import MainPage from './components/MainPage.vue'
 
 export default {
   components: {
-    StockSearch
+    StockSearch,
+    MainPage
   }
 }
 </script>
@@ -11,6 +13,8 @@ export default {
 <template>
    <div id="app">
     <StockSearch />
+    <div class="h-12"></div>
+    <MainPage />
   </div>
 </template>
 
