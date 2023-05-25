@@ -1,8 +1,6 @@
 <template>
 
-<div>
-<StockInfo />
-</div>
+<stock-info></stock-info>
 
 </template>
 
