@@ -1,13 +1,5 @@
 <template lang="">
 <div id="stockinfo">
-<<<<<<< HEAD
-    <h1>您所查詢的股票資訊</h1>
-    <stock-info-box></stock-info-box>
-    <stock-info-box></stock-info-box>
-    <stock-info-box></stock-info-box>
-    <!-- <button @click="searchdata">下一步</button> -->
-    <button-next></button-next>
-=======
     <div class="items-stretch">        
         <h2 class="self-auto">您所查詢的股票資訊</h2>
     </div>
@@ -37,7 +29,6 @@
     </div>
     <button @click="searchdata">下一步</button>
     <!-- <button-next></button-next> -->
->>>>>>> a8922a9fa31e1407c195316a23d140b65cb8f9e8
 
 </div>
 </template>
@@ -47,33 +38,10 @@ import {
     createApp
 } from 'vue';
 import StockInfoBox from "./StockInfoBox.vue";
-<<<<<<< HEAD
-=======
-
->>>>>>> a8922a9fa31e1407c195316a23d140b65cb8f9e8
 export default {
     name: "app",
     components: {
         StockInfoBox,
-<<<<<<< HEAD
-    }
-}
-// export default {
-//     name: "app",
-//     components: {
-//         StockInfoBox,
-//         'button-next': {
-//             template: `<button @click="searchdata">下一步</button>`,
-//             methods: {
-//                 searchdata() {
-//                     alert('click button.');
-//                     // 查詢資料並返回結果
-//                 }
-//             }
-//         }
-//     },
-// }
-=======
 
         methods: {
             searchdata() {
@@ -83,7 +51,6 @@ export default {
         },
     }
 }
->>>>>>> a8922a9fa31e1407c195316a23d140b65cb8f9e8
 
 // const button = createApp({});
 // button.component('button-next', {
@@ -101,24 +68,6 @@ export default {
 // });
 // app.mount('#stockinfo');
 
-<<<<<<< HEAD
-const app = createApp({
-    components: {
-        StockInfoBox,
-        'button-next': {
-            template: `<button @click="searchdata">下一步</button>`,
-            methods: {
-                searchdata() {
-                    alert('click button.');
-                    // 查詢資料並返回結果
-                }
-            }
-        }
-    }
-});
-
-app.mount('#stockinfo');
-=======
 // const app = createApp({
 //     components: {
 //         StockInfoBox,
@@ -135,7 +84,6 @@ app.mount('#stockinfo');
 // });
 
 // app.mount('#stockinfo');
->>>>>>> a8922a9fa31e1407c195316a23d140b65cb8f9e8
 </script>
 
 <style lang="">
