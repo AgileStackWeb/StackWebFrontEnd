@@ -34,7 +34,19 @@ export default {
       console.log('Next step...');
     },
     search() {
-      // 在這裡實作查詢邏輯
+      // console.log(this.stockCode);
+      // console.log(this.startDate);
+      // console.log(this.endDate);
+
+      //在這裡實作查詢邏輯
+
+      const data = {
+        'id' : this.stockCode,
+        'start' : this.startDate,
+        'end' : this.endDate
+      }
+      // console.log(data);
+      this.$emit('search-event', data);
       console.log('Search...');
     }
   }

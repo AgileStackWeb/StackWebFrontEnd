@@ -1,5 +1,5 @@
 <template>
-<stock-info></stock-info>
+    <StockInfo/>
 </template>
 
 <script lang="ts">
