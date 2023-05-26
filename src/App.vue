@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <script lang="ts">
 
 import MainPage from "./components/MainPage.vue";
@@ -28,7 +29,29 @@ export default {
     <main-page></main-page>
 </div>
 <!-- <RouterView /> -->
+=======
+<script>
+import StockSearch from './components/Stocksearch.vue'
+import MainPage from './components/MainPage.vue'
+
+export default {
+  components: {
+    StockSearch,
+    MainPage
+  }
+}
+</script>
+
+<template>
+   <div id="app">
+    <StockSearch />
+    <div class="h-12"></div>
+    <MainPage />
+  </div>
+>>>>>>> a8922a9fa31e1407c195316a23d140b65cb8f9e8
 </template>
+
+
 
 <style scoped>
 
