@@ -1,7 +1,7 @@
 <template>
 
 <stock-info></stock-info>
-
+<stock-info-box></stock-info-box>
 
 <!-- <div v-if="searchResult !== null" id="sres">
     <div id="sres">
@@ -17,6 +17,8 @@ import {
 
 import SearchStock from "./SearchStock.vue";
 import StockInfo from "./StockInfo.vue";
+import StockInfoBox from "./StockInfoBox.vue";
+
 
 import {
     createApp,
@@ -27,7 +29,8 @@ export default {
     name: "app",
     components: {
         SearchStock,
-        StockInfo
+        StockInfo,
+        StockInfoBox
     },
 
 }

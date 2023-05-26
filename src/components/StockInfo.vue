@@ -16,7 +16,10 @@ import {
 } from 'vue';
 import StockInfoBox from "./StockInfoBox.vue";
 export default {
-    
+    name: "app",
+    components: {
+        StockInfoBox,
+    }
 }
 // export default {
 //     name: "app",
