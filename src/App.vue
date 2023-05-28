@@ -1,10 +1,10 @@
 <script>
 import StockSearch from './components/Stocksearch.vue'
 import MainPage from './components/MainPage.vue'
+import './customize.css'
 
 export default {
     components: {
-        StockSearch,
         MainPage
     }
 }
@@ -12,7 +12,6 @@ export default {
 
 <template>
 <div id="app">
-    <!-- <StockSearch /> -->
     <div class="h-12"></div>
     <MainPage />
 </div>

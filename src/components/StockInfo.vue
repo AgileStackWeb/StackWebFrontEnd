@@ -3,36 +3,44 @@
 <StockSearch @search-event="handleSearchEvent" />
 <div id="stockinfo">
     <div class="items-stretch">
-        <h2 class="self-auto">您所查詢的股票資訊</h2>
+        <h2 class="section-title text-gray-700 underline">您所查詢的股票資訊</h2>
     </div>
     <div class="flex flex-row content-center">
 
-        <div class="p-8">
-            <article class="group w-64 p-4 rounded bg-gray-200">
-                <h3 class="text-lg font-bold">公司名稱</h3>
-                <p class='group-hover:text-blue-400'>公司名稱</p>
+        <div class="p-6">
+            <article class="group w-64 box-border">
+                <h3 class="text-lg font-bold box-title">公司名稱</h3>
+                <section class="box-content">
+                    <p class='group-hover:text-blue-400'>公司名稱</p>
+                </section>
             </article>
         </div>
 
-        <div class="p-8">
-            <article class="group w-64 p-4 rounded bg-gray-200">
-                <h3 class="text-lg font-bold">股票號碼</h3>
-                <p class='group-hover:text-blue-400'>{{stock_Id}}</p>
+        <div class="p-6">
+            <article class="group w-64 box-border">
+                <h3 class="text-lg font-bold box-title">股票號碼</h3>
+                <section class="rounded box-content">
+                    <p class='group-hover:text-blue-400'>{{stock_Id}}</p>
+                </section>
             </article>
         </div>
 
-        <div class="p-8">
-            <article class="group w-64 p-4 rounded bg-gray-200">
-                <h3 class="text-lg font-bold">選擇區間</h3>
-                <p class='group-hover:text-blue-400'>{{start_Date}}</p>
-                ~
-                <p class='group-hover:text-blue-400'>{{end_Date}}</p>
+        <div class="p-6">
+            <article class="group w-64 box-border">
+                <h3 class="text-lg font-bold box-title">選擇區間</h3>
+                <section class="rounded box-content">
+                    <p class='group-hover:text-blue-400'>{{start_Date}}</p>
+                    <p class="">~</p>
+                    <p class='group-hover:text-blue-400'>{{end_Date}}</p>
+                </section>
             </article>
         </div>
     </div>
     <button @click="searchdata">下一步</button>
+    <br><br>
+    <h2>訓練資料表格</h2>
+    <br>
     <TrainingButton/>
-    <!-- <button-next></button-next> -->
 
 </div>
 </template>
