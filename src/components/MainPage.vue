@@ -2,7 +2,7 @@
     <StockInfo/>
 </template>
 
-<script lang="ts">
+<script>
 import StockInfo from "./StockInfo.vue";
 
 import {
