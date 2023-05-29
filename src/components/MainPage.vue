@@ -36,6 +36,6 @@ const app = createApp({
 app.mount('#app');
 </script>
 
-<style scoped>
+<style>
 
 </style>

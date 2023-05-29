@@ -1,6 +1,6 @@
 <template>
 <div class="">
-    <div class="box-border m-7">
+    <div class="box-border m-7 bg-white">
         <h2 class="section-title relative h-fit w-fit" style="color:#8D7FB1;">查詢股票資訊</h2>
 
         <div class="relative h-fit w-fit m-5">
