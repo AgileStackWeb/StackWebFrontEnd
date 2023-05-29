@@ -65,6 +65,7 @@ label {
 }
 
 input {
+    background-color: #ffffff; 
     top: 0px;
     bottom: 0px;
     left: 0px;
