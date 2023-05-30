@@ -1,72 +1,73 @@
 button {
-    padding: 0.6em 1.2em;
-    margin: 1em;
-    font-size: 1em;
-    font-weight: 700;
-    font-family: inherit;
-    background-color: #83c8d8;
-    color: white
+  padding: 0.6em 1.2em;
+  margin: 1em;
+  font-size: 1em;
+  font-weight: 700;
+  font-family: inherit;
+  background-color: #83c8d8;
+  color: white;
 }
 
 .icon {
-    font-size: 1em;
-    font-weight: 700;
-    margin-left: 0.3em;
+  font-size: 1em;
+  font-weight: 700;
+  margin-left: 0.3em;
 }
 
 article .box-title {
-    border-width: 1em;
-    border-top-left-radius: 0.3em;
-    border-top-right-radius: 0.3em;
-    border-color: #E9E4F8;
-    background-color: #E9E4F8;
-    color : #8D7FB1;
+  border-width: 1em;
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
+  border-color: #e9e4f8;
+  background-color: #e9e4f8;
+  color: #8d7fb1;
 }
 
 .box-content {
-    background-color: white;
-    color : #5A4888;
-    border-width: 1em;
-    border-bottom-left-radius: 0.3em;
-    border-bottom-right-radius: 0.3em;
-    border-color: white;
-    font-size: 1.2em;
-    font-weight: 900;
+  background-color: white;
+  color: #5a4888;
+  border-width: 1em;
+  border-bottom-left-radius: 0.3em;
+  border-bottom-right-radius: 0.3em;
+  border-color: white;
+  font-size: 1.2em;
+  font-weight: 900;
 }
 
 /* 顯示邊框 */
 .box-border {
-    border-width: 0.15em;
-    border-color: #C9C0E2;
-    border-radius: 0.5em;
+  border-width: 0.15em;
+  border-color: #c9c0e2;
+  border-radius: 0.5em;
 }
 
 .section-title {
-    padding: 0.6em 1.2em;
-    margin: 0.3em;
-    font-size: 1.5em;
-    font-weight: 700;
-    font-family: inherit;
-    text-decoration-thickness: 6px;
-    text-underline-offset: 12px;
-    text-decoration-color: #A991E9;
+  padding: 0.6em 1.2em;
+  margin: 0.3em;
+  font-size: 1.5em;
+  font-weight: 700;
+  font-family: inherit;
+  text-decoration-thickness: 6px;
+  text-underline-offset: 12px;
+  text-decoration-color: #a991e9;
 }
 
 label {
-    color: #474747;
-    padding: 1em 0.5em;
-    margin: 0.5em;
-    font-size: 1.2em;
-    font-weight: 700;
-    font-family: inherit;
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
+  color: #474747;
+  padding: 1em 0.5em;
+  margin: 0.5em;
+  font-size: 1.2em;
+  font-weight: 700;
+  font-family: inherit;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
 }
 
 input {
-    background-color: #ffffff; 
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
+  background-color: #ffffff;
+  color: rgb(8, 8, 8);
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
 }
