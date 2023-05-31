@@ -47,6 +47,7 @@ import TrainingButton from "../components/TrainingButton.vue";
 import StockSearch from "../components/Stocksearch.vue";
 
 export default {
+  name: "start",
   components: {
     TrainingButton,
     StockSearch,
