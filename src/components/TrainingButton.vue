@@ -4,18 +4,13 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      msg: "開始訓練",
-    };
-  },
-  methods: {
-    alertmsg() {
-      console.log("Training Success.");
-      alert("訓練成功");
-    },
-  },
-};
+<script setup>
+import { ref } from "vue";
+
+const msg = ref("開始訓練");
+
+function alertmsg() {
+  console.log("Training Success.");
+  alert("訓練成功");
+}
 </script>
