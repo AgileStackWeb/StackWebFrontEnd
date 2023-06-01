@@ -1,8 +1,4 @@
 <template>
-  <div>
-    <router-view></router-view>
-  </div>
-
   <StockSearch @search-event="handleSearchEvent" />
   <div id="stockinfo">
     <div class="items-stretch">
