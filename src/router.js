@@ -19,6 +19,11 @@ const routes = [
     name: "Start",
     component: Start,
   },
+  {
+    path: '/starttrain',
+    name: 'StartTrain',
+    component: StartTrain
+  },
   // 在這裡添加其他路由配置
 ];
 
