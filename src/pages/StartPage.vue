@@ -42,34 +42,22 @@
   </div>
 </template>
 
-<script>
+<script setup>
+import { ref } from "vue";
 import TrainingButton from "../components/TrainingButton.vue";
 import StockSearch from "../components/Stocksearch.vue";
 
-export default {
-  name: "start",
-  components: {
-    TrainingButton,
-    StockSearch,
-  },
-  data() {
-    return {
-      stock_Id: "",
-      start_Date: "",
-      end_Date: "",
-    };
-  },
-  methods: {
-    searchdata() {
-      console.log("Next Step.");
-      // 查詢資料並返回結果
-    },
-    handleSearchEvent(data) {
-      console.log(data);
-      this.stock_Id = data.id;
-      this.start_Date = data.start;
-      this.end_Date = data.end;
-    },
-  },
-};
+const stock_Id = ref("");
+const start_Date = ref("");
+const end_Date = ref("");
+
+function searchdata() {
+  console.log("Next Step.");
+}
+function handleSearchEvent(data) {
+  console.log(data);
+  stock_Id.value = data.id;
+  start_Date.value = data.start;
+  end_Date.value = data.end;
+}
 </script>

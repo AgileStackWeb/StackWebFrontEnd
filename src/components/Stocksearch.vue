@@ -30,25 +30,20 @@
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      stockCode: "",
-      startDate: "",
-      endDate: "",
-    };
-  },
-  methods: {
-    search() {
-      const data = {
-        id: this.stockCode,
-        start: this.startDate,
-        end: this.endDate,
-      };
-      this.$emit("search-event", data);
-      console.log("Search...");
-    },
-  },
-};
+<script setup>
+import { ref } from "vue";
+const stockCode = ref("");
+const startDate = ref("");
+const endDate = ref("");
+const emit = defineEmits(["search-event"]);
+
+function search() {
+  const data = {
+    id: stockCode.value,
+    start: startDate.value,
+    end: endDate.value,
+  };
+  emit("search-event", data);
+  console.log("Search...");
+}
 </script>
