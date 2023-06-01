@@ -1,39 +1,30 @@
+import { createRouter, createWebHistory } from 'vue-router';
+import Start from './pages/StartPage.vue';
+import Main from './pages/MainPage.vue';
+import App from './pages/App.vue';
 
-// 导入 Vue 和 Vue Router
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-
-// 导入你的组件
-import HomePage from './pages/HomePage.vue'
-import StartTrainPage from './pages/StartTrainPage.Vue'
-
-// 使用 Vue Router 插件
-Vue.use(VueRouter)
-
-// 定义你的路由
 const routes = [
-{ path: '/', component: HomePage },
-{ path: '/starttrain', component: StartTrain },
-]
+  {
+    path: '/',
+    name: 'Main',
+    component: Main
+  },
+  {
+    path: '/main',
+    name: 'Main',
+    component: Main
+  },  
+  {
+    path: '/start',
+    name: 'Start',
+    component: Start
+  },
+  // 在這裡添加其他路由配置
+];
 
-// 创建路由实例
-const router = new VueRouter({
-    routes
-})
+const router = createRouter({
+  history: createWebHistory(),
+  routes
+});
 
-// 导出路由实例
-export default new VueRouter({
-    routes: [
-        {
-          name: "HelloWorld", // 元件呈現的名稱
-          path: "/Homepage", // 對應的虛擬路徑
-          component: HomePage   // 對應的元件
-        },
-        {
-          name: "Page",
-          path: "/Page",
-          component: Page
-        }
-    ],
-  });
-
+export default router;
