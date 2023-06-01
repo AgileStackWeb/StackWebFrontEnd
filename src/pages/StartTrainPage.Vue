@@ -1,20 +1,32 @@
+<script>
+  import Table from '../components/Table.vue';
+  export default {
+    components: {
+      Table
+    }
+};
+</script>
+
 <template>
   <div>
-    <b-table striped hover :items="items"></b-table>
+    <router-view></router-view>
   </div>
-</template>
+  
+  <div id='app' class="container" style="text-align: center;">
+      <h5 class="card-title">所有資料的設定</h5>
+      <table style="align-content: center;">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>名稱</th>
+            <th>價錢</th>
+          </tr>
+        </thead>
+        <tbody>
+          <TableRow v-for="item in tableData" :key="item.name" :data="item"></TableRow>
+        </tbody>
+      </table>
+  </div>
+  </template> 
 
-<script>
-  export default {
-    data() {
-      return {
-        items: [
-          { age: 40, first_name: 'Dickerson', last_name: 'Macdonald' },
-          { age: 21, first_name: 'Larsen', last_name: 'Shaw' },
-          { age: 89, first_name: 'Geneva', last_name: 'Wilson' },
-          { age: 38, first_name: 'Jami', last_name: 'Carney' }
-        ]
-      }
-    }
-  }
-</script>
+
