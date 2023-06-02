@@ -4,7 +4,7 @@
       <thead>
         <tr>
           <th
-            class="py-2 px-4 border-b"
+            class="py-2 px-4 border-b bg-violet-200"
             style="background-color: #e9e4f8; color: #8d7fb1"
           >
             模型名稱
@@ -49,32 +49,32 @@
       </thead>
       <tbody>
         <tr v-for="item in items" :key="item" class="hover:bg-gray-100">
-          <td class="py-2 px-4 border-b" style="color: #5a4888">
+          <td class="py-2 px-4 border-b text-neutral-800">
             {{ item.modelName }}
           </td>
-          <td class="py-2 px-4 border-b" style="color: #5a4888">
+          <td class="py-2 px-4 border-b text-neutral-800">
             {{ item.stockNumber }}
           </td>
-          <td class="py-2 px-4 border-b" style="color: #5a4888">
+          <td class="py-2 px-4 border-b text-neutral-800">
             {{ item.companyName }}
           </td>
-          <td class="py-2 px-4 border-b" style="color: #5a4888">
+          <td class="py-2 px-4 border-b text-neutral-800">
             {{ item.dateRange }}
           </td>
-          <td class="py-2 px-4 border-b" style="color: #5a4888">
+          <td class="py-2 px-4 border-b text-neutral-800">
             {{ item.chooseModel }}
           </td>
-          <td class="py-2 px-4 border-b" style="color: #5a4888">
+          <td class="py-2 px-4 border-b text-neutral-800">
             {{ item.dataCleaning }}
           </td>
-          <td class="py-2 px-4 border-b" style="color: #5a4888">
+          <td class="py-2 px-4 border-b text-neutral-800">
             {{ item.technicalIndicators }}
           </td>
         </tr>
       </tbody>
     </table>
     <TrainingButton></TrainingButton>
-    <ProgressBar class="text-slate-950">
+    <ProgressBar class="text-neutral-800">
       已訓練 28 %
       <!-- :currentVal="val" :minVal="min" :maxVal="max" v-slot="{ percent }" > -->
       <!-- 已下載 {{ percent }} % -->
