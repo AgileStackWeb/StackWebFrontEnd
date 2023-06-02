@@ -49,26 +49,14 @@
       </thead>
       <tbody>
         <tr v-for="item in items" :key="item" class="hover:bg-gray-100">
-          <td class="py-2 px-4 border-b text-neutral-800">
-            {{ item.modelName }}
+          <td class="py-2 px-4 border-b" style="color: #5A4888">
+            {{ item.player }}
           </td>
-          <td class="py-2 px-4 border-b text-neutral-800">
-            {{ item.stockNumber }}
+          <td class="py-2 px-4 border-b" style="color: #5A4888">
+            {{ item.age }}
           </td>
-          <td class="py-2 px-4 border-b text-neutral-800">
-            {{ item.companyName }}
-          </td>
-          <td class="py-2 px-4 border-b text-neutral-800">
-            {{ item.dateRange }}
-          </td>
-          <td class="py-2 px-4 border-b text-neutral-800">
-            {{ item.chooseModel }}
-          </td>
-          <td class="py-2 px-4 border-b text-neutral-800">
-            {{ item.dataCleaning }}
-          </td>
-          <td class="py-2 px-4 border-b text-neutral-800">
-            {{ item.technicalIndicators }}
+          <td class="py-2 px-4 border-b" style="color: #5A4888">
+            {{ item.country }}
           </td>
         </tr>
       </tbody>
@@ -88,40 +76,24 @@ import ProgressBar from "../components/ProgressBar.vue";
 import { ref } from "vue";
 const items = ref([
   {
-    modelName: "克林姆",
-    stockNumber: "0201",
-    companyName: "克林姆股份有限公司",
-    dateRange: "2023/02/11~2023/04/12",
-    chooseModel: "XGB",
-    dataCleaning: "Standard",
-    technicalIndicators: "純量價",
+    player: "Stephen Curry",
+    age: 35,
+    country: "USA",
   },
   {
-    modelName: "牧牧",
-    stockNumber: "0313",
-    companyName: "牧牧豬式會社",
-    dateRange: "2022/12/13~2023/01/05",
-    chooseModel: "XGB",
-    dataCleaning: "Standard",
-    technicalIndicators: "純量價",
+    player: "Lebron James",
+    age: 38,
+    country: "USA",
   },
   {
-    modelName: "Meiko",
-    stockNumber: "1231",
-    companyName: "Meiko Inc",
-    dateRange: "2019/12/31~2020/01/10",
-    chooseModel: "XGB",
-    dataCleaning: "Standard",
-    technicalIndicators: "純量價",
+    player: "Kevin Durant",
+    age: 34,
+    country: "USA",
   },
   {
-    modelName: "芝麻糊",
-    stockNumber: "0113",
-    companyName: "芝麻糊公司",
-    dateRange: "2023/03/11~2023/11/12",
-    chooseModel: "XGB",
-    dataCleaning: "Standard",
-    technicalIndicators: "純量價",
+    player: "Giannis Antetokounmpo",
+    age: 28,
+    country: "Greece",
   },
 ]);
 </script>
