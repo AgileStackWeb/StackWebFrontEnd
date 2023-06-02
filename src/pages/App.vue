@@ -1,5 +1,5 @@
 <template>
-  <nav class="w-screen" style="background-color: #7A63B7;">
+  <nav class="w-screen" style="background-color: #7a63b7">
     <div class="max-w-7xl px-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between h-16">
         <div class="flex items-center">
