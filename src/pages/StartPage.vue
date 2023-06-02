@@ -34,11 +34,10 @@
         </article>
       </div>
     </div>
-    <button @click="searchdata">下一步</button>
+    <router-link to="/starttrain">
+      <button @click="searchdata">下一步</button></router-link
+    >
     <br /><br />
-    <h2>訓練資料表格</h2>
-    <br />
-    <TrainingButton />
   </div>
 </template>
 
