@@ -1,14 +1,9 @@
 <template>
-  <!-- <div :class="['w-80 p-5', 'bg-white', 'rounded-lg']">
-    <div :class="['w-full h-2', 'bg-cyan-100', 'rounded-full']">
-      <div :class="['w-1/3 h-full', 'bg-violet-600', 'rounded-full']" />
-    </div>
-  </div> -->
   <div
     :class="[
       'w-80 p-5',
-      'bg-white',
-      'rounded-lg',
+      'bg-white', // progressBar的背景色
+      'rounded-lg', // 圓角
       'flex flex-col',
       'justify-center items-center',
       'gap-3',
