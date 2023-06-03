@@ -4,7 +4,6 @@ import Main from "./pages/SecondPage.vue";
 import Home from "./pages/Home.vue";
 import StartTrain from "./pages/StartTrainPage.vue";
 import ModelList from "./pages/ModelListPage.vue";
-import Backtest from "./pages/BacktestPage.vue";
 import Predict from "./pages/Predict.vue";
 
 import Test from "./pages/Test.vue";
@@ -29,6 +28,21 @@ const routes = [
     path: "/starttrain",
     name: "StartTrain",
     component: StartTrain,
+  },
+  {
+    path: "/modellist",
+    name: "ModelList",
+    component: ModelList,
+  },
+  {
+    path: "/predict",
+    name: "Predict",
+    component: Predict,
+  },
+  {
+    path: "/test",
+    name: "Test",
+    component: Test,
   },
   // 在這裡添加其他路由配置
 ];
