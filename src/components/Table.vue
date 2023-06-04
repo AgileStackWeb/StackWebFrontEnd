@@ -29,3 +29,6 @@
     </table>
   </div>
 </template>
+
+<script setup>
+</script>
