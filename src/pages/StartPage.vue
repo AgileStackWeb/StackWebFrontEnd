@@ -16,7 +16,7 @@
 
       <div class="p-6">
         <article class="group w-64 box-border">
-          <h3 class="text-lg font-bold box-title">股票號碼</h3>
+          <h3 class="text-lg font-bold box-title">股票號碼</h3>dadaw
           <section class="box-content">
             <p class="">{{ stock_Id }}</p>
           </section>
