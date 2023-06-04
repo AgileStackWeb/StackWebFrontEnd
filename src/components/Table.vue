@@ -1,7 +1,4 @@
 <template>
-  <!-- <div>
-    <b-table striped hover :items="items"></b-table>
-  </div> -->
   <div>
     <table class="min-w-full bg-white border border-gray-300">
       <thead>
