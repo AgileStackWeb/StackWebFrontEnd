@@ -96,32 +96,5 @@ const items = ref([
     dataCleaning: "Standard",
     technicalIndicators: "純量價",
   },
-  {
-    modelName: "牧牧",
-    stockNumber: "0313",
-    companyName: "牧牧豬式會社",
-    dateRange: "2022/12/13~2023/01/05",
-    chooseModel: "XGB",
-    dataCleaning: "Standard",
-    technicalIndicators: "純量價",
-  },
-  {
-    modelName: "Meiko",
-    stockNumber: "1231",
-    companyName: "Meiko Inc",
-    dateRange: "2019/12/31~2020/01/10",
-    chooseModel: "XGB",
-    dataCleaning: "Standard",
-    technicalIndicators: "純量價",
-  },
-  {
-    modelName: "芝麻糊",
-    stockNumber: "0113",
-    companyName: "芝麻糊公司",
-    dateRange: "2023/03/11~2023/11/12",
-    chooseModel: "XGB",
-    dataCleaning: "Standard",
-    technicalIndicators: "純量價",
-  },
 ]);
 </script>

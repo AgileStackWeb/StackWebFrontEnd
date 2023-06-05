@@ -1,23 +1,16 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Start from "./pages/StartPage.vue";
-import Main from "./pages/SecondPage.vue";
 import Home from "./pages/Home.vue";
 import StartTrain from "./pages/StartTrainPage.vue";
 import ModelList from "./pages/ModelListPage.vue";
 import Predict from "./pages/Predict.vue";
 
-import Test from "./pages/Test.vue";
 
 const routes = [
   {
     path: "/",
     name: "Home",
     component: Home,
-  },
-  {
-    path: "/main",
-    name: "Main",
-    component: Main,
   },
   {
     path: "/start",
@@ -38,11 +31,6 @@ const routes = [
     path: "/predict",
     name: "Predict",
     component: Predict,
-  },
-  {
-    path: "/test",
-    name: "Test",
-    component: Test,
   },
   // 在這裡添加其他路由配置
 ];
