@@ -24,7 +24,6 @@
             to="/predict"
             >回測頁面(暫時放著)</router-link
           >
-
         </div>
       </div>
     </div>
