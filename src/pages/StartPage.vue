@@ -28,12 +28,14 @@
     <router-link to="/starttrain">
       <button @click="searchdata">下一步</button></router-link
     >
+    <button @click="postInputData">開始訓練</button>
     <br /><br />
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
+import axios from "axios";
 import TrainingButton from "../components/TrainingButton.vue";
 import StockSearch from "../components/Stocksearch.vue";
 
@@ -49,5 +51,22 @@ function handleSearchEvent(data) {
   stock_Id.value = data.id;
   start_Date.value = data.start;
   end_Date.value = data.end;
+}
+
+function postInputData() {
+  axios
+    .post("http://127.0.0.1:5000/api/user/input", {
+      stock_code: stock_Id.value,
+      start_time: start_Date.value,
+      end_time: end_Date.value,
+      model_name: "model_test",
+      data_clean: "standard",
+      model_type: "SVR",
+      technical_indicator: "price",
+    })
+    //.then((response) => (this.info = response))
+    .catch(function (error) {
+      console.log(error);
+    });
 }
 </script>

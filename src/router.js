@@ -5,7 +5,6 @@ import StartTrain from "./pages/StartTrainPage.vue";
 import ModelList from "./pages/ModelListPage.vue";
 import Predict from "./pages/Predict.vue";
 
-
 const routes = [
   {
     path: "/",
