@@ -1,4 +1,11 @@
 <template>
+  <button>
+    <router-link
+      class="text-white hover:text-blue px-3 py-2 rounded-md text-sm font-medium"
+      to="/modellist"
+      >上一頁</router-link
+    >
+  </button>
   <div class="box-border p-7 bg-white">
     <div class="relative h-fit w-fit m-5">
       <label for="range">選擇區間 :</label>
