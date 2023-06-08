@@ -20,10 +20,8 @@
   </div>
   <div>
     <br />
-    <h2>{{ startDate }} ~ {{ endDate }}</h2>
-    <h2>預測結果 {{ price }}</h2>
+    <h1>預測結果 {{ price }}</h1>
   </div>
-  <h1>{{ $route.params.id }}</h1>
 </template>
 
 <script setup>
