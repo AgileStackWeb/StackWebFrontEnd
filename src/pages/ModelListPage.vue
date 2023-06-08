@@ -49,8 +49,52 @@
 </template>
 
 <script setup>
+import axios from "axios";
 import TrainingButton from "../components/TrainingButton.vue";
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+
+const rows = ref([
+  {
+    id: 0,
+    name: "Model One",
+    number: "102",
+    time: "2023-04-01 ~ 2023-04-02",
+    predata: "Standard",
+    tech: "Standard",
+  },
+  {
+    id: 1,
+    name: "Model Two",
+    number: "103",
+    time: "2023-05-01 ~ 2023-05-02",
+    predata: "Standard",
+    tech: "Standard",
+  },
+]);
+
+function getModelList() {
+  axios
+    .get("http://127.0.0.1:5000/api/user/show/pretrain_model")
+    .then((response) => {
+      rows.value = response.data;
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  //   rows.value = ([
+  //   {
+  //     id: 0,
+  //     name: "TEST",
+  //     number: "102",
+  //     time: "2023-04-01 ~ 2023-04-02",
+  //     predata: "Standard",
+  //     tech: "Standard"
+  //   }
+  // ])
+}
+
+onMounted(getModelList);
 
 function usemodel() {
   // alert('usemodel.')
@@ -70,27 +114,23 @@ const columns = ref([
   },
   {
     id: 3,
+    label: "股票號碼",
+    field: "number",
+  },
+  {
+    id: 4,
     label: "時間區間",
     field: "time",
   },
   {
-    id: 4,
+    id: 5,
+    label: "資料清洗",
+    field: "predata",
+  },
+  {
+    id: 6,
     label: "技術指標",
     field: "tech",
-  },
-]);
-const rows = ref([
-  {
-    id: 0,
-    name: "Model One",
-    time: "2023-04-01 ~ 2023-04-02",
-    tech: "Standard",
-  },
-  {
-    id: 1,
-    name: "Model Two",
-    time: "2023-05-01 ~ 2023-05-02",
-    tech: "Standard",
   },
 ]);
 </script>
