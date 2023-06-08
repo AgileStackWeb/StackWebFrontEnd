@@ -21,14 +21,40 @@
   <div>
     <br />
     <h2>{{ startDate }} ~ {{ endDate }}</h2>
-    <h2>預測結果</h2>
+    <h2>預測結果 {{ price }}</h2>
   </div>
+  <h1>{{ $route.params.id }}</h1>
 </template>
 
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref } from "vue";
+import { postResultPriceApi, postResultImgApi } from "../js/API";
+import { useRoute } from "vue-router";
+
 const startDate = ref("");
 const endDate = ref("");
+const route = useRoute();
+const price = ref("");
+
+function resultImg() {
+  console.log(route.params.id);
+  postResultImgApi({
+    model_id: route.params.id,
+    stock_code: route.params.code,
+    data_clean: route.params.clean,
+    start_time: startDate.value,
+    end_time: endDate.value,
+  });
+}
+function resultPrice() {
+  postResultPriceApi({
+    model_id: route.params.id,
+    stock_code: route.params.code,
+    data_clean: route.params.clean,
+  }).then((response) => {
+    price.value = response.data;
+  });
+}
 
 function produceData() {
   const data = {
@@ -37,5 +63,7 @@ function produceData() {
   };
   console.log("Predict Data", data);
   alert("訓練成功!");
+  //resultImg()
+  resultPrice();
 }
 </script>

@@ -23,13 +23,12 @@
         <tr v-for="row in rows" :key="row.id" class="hover:bg-gray-100">
           <td
             :key="row.model_id"
-            @click="getModelId(row.model_id)"
             class="py-2 px-4 border-b"
             style="color: #5a4888"
           >
             <router-link
               class="text-purple hover:text-blue px-3 py-2 rounded-md text-sm font-medium"
-              to="/predict"
+              :to="`modellist/predict/${row.model_id}/${row.stock_code}/${row.data_clean}`"
             >
               <font-awesome-icon
                 class="icon"
@@ -54,11 +53,13 @@
 
 <script setup>
 import TrainingButton from "../components/TrainingButton.vue";
-import { ref, onMounted, proxyRefs } from "vue";
+import { ref, onMounted } from "vue";
 import { getModelApi } from "../js/API";
 
 function getData() {
-  rows.value = getModelApi({}).then((response) => console.log(response));
+  getModelApi({}).then((response) => {
+    rows.value = response.data.map((x, i) => ({ ...x, index: i + 1 }));
+  });
   console.log(rows.value);
 }
 
@@ -69,12 +70,12 @@ const columns = ref([
   {
     id: 1,
     label: "模型編號",
-    field: "model_id",
+    field: "index",
   },
   {
     id: 2,
     label: "模型名稱",
-    field: "name",
+    field: "model_name",
   },
   {
     id: 3,
@@ -99,10 +100,10 @@ const columns = ref([
   {
     id: 7,
     label: "技術指標",
-    field: "tech",
+    field: "technical_indicator",
   },
 ]);
 
-//欄位假資料
+//欄位
 const rows = ref([]);
 </script>

@@ -27,7 +27,7 @@ const routes = [
     component: ModelList,
   },
   {
-    path: "/predict",
+    path: "/modellist/predict/:id/:code/:clean",
     name: "Predict",
     component: Predict,
   },
