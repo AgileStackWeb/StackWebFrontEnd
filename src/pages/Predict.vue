@@ -38,7 +38,7 @@ const startDate = ref("");
 const endDate = ref("");
 const route = useRoute();
 const price = ref("");
-const path = ref('http://127.0.0.1:5000/images/65b8aad4-c3ec-41e4-8223-5436daa21fa0.jpg');
+const path = ref('http://127.0.0.1:5000/images');
 const loading = ref("");
 
 function resultImg() {
