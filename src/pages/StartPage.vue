@@ -14,7 +14,7 @@
         </article>
       </div>
 
-      <div class="p-6">
+      <div class="p-6"> 
         <article class="group w-64 box-border">
           <h3 class="text-lg font-bold box-title">選擇區間</h3>
           <section class="box-content">
