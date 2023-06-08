@@ -58,25 +58,24 @@ function handleSearchEvent(data) {
 }
 
 function postInputData() {
-  loading.value = "Loading"
-  errorMessage.value = ""
+  loading.value = "Loading";
+  errorMessage.value = "";
 
   startApi({
-      stock_code: stock_Id.value,
-      start_time: start_Date.value,
-      end_time: end_Date.value,
-      model_name: "model_test",
-      data_clean: "standard",
-      model_type: "SVR",
-      technical_indicator: "price",
-    })
+    stock_code: stock_Id.value,
+    start_time: start_Date.value,
+    end_time: end_Date.value,
+    model_name: "model_test",
+    data_clean: "standard",
+    model_type: "SVR",
+    technical_indicator: "price",
+  })
     // .then((response) => loading.value="")
     .catch(function (error) {
-      console.log(error.message)
-      errorMessage.value = error.message
-
-     })
-    .finally(()=> loading.value="")
+      console.log(error.message);
+      errorMessage.value = error.message;
+    })
+    .finally(() => (loading.value = ""));
 }
 
 // function a(x) {

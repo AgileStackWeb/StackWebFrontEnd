@@ -21,7 +21,12 @@
       </thead>
       <tbody>
         <tr v-for="row in rows" :key="row.id" class="hover:bg-gray-100">
-          <td :key="row.model_id" @click="getModelId(row.model_id)" class="py-2 px-4 border-b" style="color: #5a4888">
+          <td
+            :key="row.model_id"
+            @click="getModelId(row.model_id)"
+            class="py-2 px-4 border-b"
+            style="color: #5a4888"
+          >
             <router-link
               class="text-purple hover:text-blue px-3 py-2 rounded-md text-sm font-medium"
               to="/predict"
@@ -48,17 +53,16 @@
 </template>
 
 <script setup>
-
 import TrainingButton from "../components/TrainingButton.vue";
 import { ref, onMounted, proxyRefs } from "vue";
 import { getModelApi } from "../js/API";
 
-function getData(){
-  rows.value = getModelApi({}).then(response => console.log(response))
-  console.log(rows.value)
+function getData() {
+  rows.value = getModelApi({}).then((response) => console.log(response));
+  console.log(rows.value);
 }
 
-onMounted(getData)
+onMounted(getData);
 
 // 固定的欄位名稱
 const columns = ref([

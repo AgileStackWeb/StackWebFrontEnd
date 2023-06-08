@@ -26,10 +26,9 @@
 </template>
 
 <script setup>
-import { ref , onMounted} from "vue";
+import { ref, onMounted } from "vue";
 const startDate = ref("");
 const endDate = ref("");
-
 
 function produceData() {
   const data = {
