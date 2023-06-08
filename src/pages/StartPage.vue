@@ -25,6 +25,15 @@
         </article>
       </div>
     </div>
+    <div class="relative h-fit w-fit">
+      <label for="stock-code">模型名稱 :</label>
+      <input
+        id="model_name"
+        class="box-border"
+        v-model="model_name"
+        type="text"
+      />
+    </div>
     <router-link to="/starttrain">
       <button @click="searchdata">下一步</button></router-link
     >
@@ -65,7 +74,7 @@ function postInputData() {
     stock_code: stock_Id.value,
     start_time: start_Date.value,
     end_time: end_Date.value,
-    model_name: "model_test",
+    model_name: model_name.value,
     data_clean: "standard",
     model_type: "SVR",
     technical_indicator: "price",
