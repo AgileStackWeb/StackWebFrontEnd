@@ -29,19 +29,23 @@
       <button @click="searchdata">下一步</button></router-link
     >
     <button @click="postInputData">開始訓練</button>
+    <h1>{{ loading }}</h1>
+    <h1>{{ errorMessage }}</h1>
     <br /><br />
   </div>
 </template>
 
 <script setup>
 import { ref } from "vue";
-import axios from "axios";
+import { startApi } from "../js/API";
 import TrainingButton from "../components/TrainingButton.vue";
 import StockSearch from "../components/Stocksearch.vue";
 
 const stock_Id = ref("");
 const start_Date = ref("");
 const end_Date = ref("");
+const loading = ref("");
+const errorMessage = ref("");
 
 function searchdata() {
   console.log("Next Step.");
@@ -54,8 +58,10 @@ function handleSearchEvent(data) {
 }
 
 function postInputData() {
-  axios
-    .post("http://127.0.0.1:5000/api/user/input", {
+  loading.value = "Loading"
+  errorMessage.value = ""
+
+  startApi({
       stock_code: stock_Id.value,
       start_time: start_Date.value,
       end_time: end_Date.value,
@@ -64,9 +70,21 @@ function postInputData() {
       model_type: "SVR",
       technical_indicator: "price",
     })
-    //.then((response) => (this.info = response))
+    // .then((response) => loading.value="")
     .catch(function (error) {
-      console.log(error);
-    });
+      console.log(error.message)
+      errorMessage.value = error.message
+
+     })
+    .finally(()=> loading.value="")
 }
+
+// function a(x) {
+//   return x + 1
+// }
+// a = x => x + 1
+// a = (x) => x + 1
+// a = x => {
+//   return x + 1
+// }
 </script>
