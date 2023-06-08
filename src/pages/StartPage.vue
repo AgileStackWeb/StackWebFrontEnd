@@ -70,7 +70,6 @@ function postInputData() {
     model_type: "SVR",
     technical_indicator: "price",
   })
-    // .then((response) => loading.value="")
     .catch(function (error) {
       console.log(error.message);
       errorMessage.value = error.message;

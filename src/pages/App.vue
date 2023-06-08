@@ -19,11 +19,6 @@
             to="/modellist"
             >模型列表</router-link
           >
-          <router-link
-            class="text-white hover:text-blue px-3 py-2 rounded-md text-sm font-medium"
-            to="/predict"
-            >回測頁面(暫時放著)</router-link
-          >
         </div>
       </div>
     </div>

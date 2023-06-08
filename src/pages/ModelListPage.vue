@@ -47,12 +47,10 @@
         </tr>
       </tbody>
     </table>
-    <TrainingButton></TrainingButton>
   </div>
 </template>
 
 <script setup>
-import TrainingButton from "../components/TrainingButton.vue";
 import { ref, onMounted } from "vue";
 import { getModelApi } from "../js/API";
 

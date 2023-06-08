@@ -17,10 +17,15 @@
       開始預測
       <font-awesome-icon class="icon" :icon="['fas', 'magnifying-glass']" />
     </button>
+    <img :src="(path)">
   </div>
   <div>
+    <button @click="resultPrice">
+      預測明天股價
+      <font-awesome-icon class="icon" :icon="['fas', 'magnifying-glass']" />
+    </button>
     <br />
-    <h1>預測結果 {{ price }}</h1>
+    <h1 class="relative h-fit w-fit m-5"> 預測明天股價結果 {{ price }}</h1>
   </div>
 </template>
 
@@ -33,8 +38,11 @@ const startDate = ref("");
 const endDate = ref("");
 const route = useRoute();
 const price = ref("");
+const path = ref('http://127.0.0.1:5000/images/65b8aad4-c3ec-41e4-8223-5436daa21fa0.jpg');
+const loading = ref("");
 
 function resultImg() {
+  loading.value = "Loading";
   console.log(route.params.id);
   postResultImgApi({
     model_id: route.params.id,
@@ -42,6 +50,8 @@ function resultImg() {
     data_clean: route.params.clean,
     start_time: startDate.value,
     end_time: endDate.value,
+  }).then((response) => {
+    path.value = 'http://127.0.0.1:5000/images/' + response.data;
   });
 }
 function resultPrice() {
@@ -50,7 +60,7 @@ function resultPrice() {
     stock_code: route.params.code,
     data_clean: route.params.clean,
   }).then((response) => {
-    price.value = response.data;
+    price.value = response.data.toFixed(2);
   });
 }
 
@@ -59,9 +69,6 @@ function produceData() {
     start: startDate.value,
     end: endDate.value,
   };
-  console.log("Predict Data", data);
-  alert("訓練成功!");
-  //resultImg()
-  resultPrice();
+  resultImg()
 }
 </script>
